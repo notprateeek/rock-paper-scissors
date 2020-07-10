@@ -10,6 +10,13 @@ img {
           transform: scale(0.5);
 }
 
+h1,
+h2,
+p,
+button {
+  text-transform: capitalize;
+}
+
 button {
   width: 150px;
   height: 50px;
@@ -89,8 +96,7 @@ section {
   font-size: 50px;
 }
 
-.match .hands,
-.match .options {
+.match .hands {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,6 +110,17 @@ section {
 .match .hands .player-hand {
   -webkit-transform: rotateY(180deg) scale(0.5);
           transform: rotateY(180deg) scale(0.5);
+}
+
+.match .options {
+  width: 60%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 div.fadeOut {
