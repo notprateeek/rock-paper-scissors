@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  transform: scale(0.5);
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: #f6f6f6;
+  font-size: 20px;
+  background-color: #323232;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+section {
+  height: 100vh;
+  background-color: #f6f6f6;
+  color: #323232;
+  font-family: 'poppins', sans-serif;
+}
+
+.score {
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+  }
+}
+
+.intro {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.5s ease;
+  h1 {
+    font-size: 50px;
+  }
+}
+
+.match {
+  position: absolute;
+  top: 20vh;
+  left: 50%;
+  transform: translate(-50%);
+  transition: opacity 0.5s ease 0.5s;
+
+  .winner {
+    color: #323232;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .hands,
+  .options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .hands {
+    .player-hand {
+      transform: rotateY(180deg) scale(0.5);
+    }
+  }
+}
+
+div.fadeOut {
+  pointer-events: none;
+  opacity: 0;
+}
+
+div.fadeIn {
+  pointer-events: all;
+  opacity: 1;
+}
