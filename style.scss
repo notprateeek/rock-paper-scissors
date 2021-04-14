@@ -4,102 +4,164 @@
   box-sizing: border-box;
 }
 
-img {
-  transform: scale(0.5);
+body {
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  font-size: 1.125rem;
+  color: #323232;
+  background-color: #f6f6f6;
 }
 
-h1,
-h2,
-p,
-button {
-  text-transform: capitalize;
+.game,
+.intro,
+.match {
+  display: flex;
+  flex-direction: column;
 }
 
 button {
-  width: 150px;
-  height: 50px;
-  background: none;
-  border: none;
-  color: #f6f6f6;
-  font-size: 20px;
-  background-color: #323232;
-  border-radius: 10px;
+  border-color: #000;
+  background-color: inherit;
+  font: inherit;
+  outline: none;
   cursor: pointer;
 }
 
-section {
+.score,
+.match {
+  justify-content: space-evenly;
+}
+
+.score,
+.intro,
+.match {
+  text-align: center;
+}
+
+.game {
   height: 100vh;
-  background-color: #f6f6f6;
-  color: #323232;
-  font-family: 'poppins', sans-serif;
+  width: 100vw;
+  padding: 2rem;
+  justify-content: space-around;
+}
+
+.play {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
 }
 
 .score {
-  height: 20vh;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  h2 {
-    font-size: 30px;
-  }
-
-  p {
-    text-align: center;
-    font-size: 25px;
-    padding: 10px;
-  }
 }
 
 .intro {
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+img {
+  width: 40%;
+  height: auto;
+}
+
+.hands {
+  width: 100%;
+  display: flex;
   justify-content: space-around;
-  transition: opacity 0.5s ease;
-  h1 {
-    font-size: 50px;
-  }
+  margin: 1rem 0;
+}
+
+.player-hand {
+  transform: scaleX(-1);
+}
+
+.options button {
+  padding: 0.4rem 0.8rem;
+}
+
+.player-score h2,
+.computer-score h2 {
+  margin-bottom: 0.5rem;
 }
 
 .match {
-  position: absolute;
-  top: 20vh;
-  left: 50%;
-  transform: translate(-50%);
-  transition: opacity 0.5s ease 0.5s;
+  display: none;
+}
 
-  .winner {
-    color: #323232;
-    text-align: center;
-    font-size: 50px;
+@media only screen and (min-width: 375px) {
+  .game {
+    justify-content: space-evenly;
+  }
+
+  .intro {
+    padding: 2rem 3rem;
   }
 
   .hands {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    .player-hand {
-      transform: rotateY(180deg) scale(0.5);
-    }
+    margin: 1.5rem 0;
   }
 
-  .options {
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
+  .options button {
+    padding: 0.45rem 0.9rem;
   }
 }
 
-div.fadeOut {
-  pointer-events: none;
-  opacity: 0;
+@media only screen and (min-width: 425px) {
+  .intro {
+    padding: 2rem 5rem;
+  }
+
+  .hands {
+    margin: 2rem 0;
+  }
+
+  .options button {
+    padding: 0.5rem 1rem;
+  }
 }
 
-div.fadeIn {
-  pointer-events: all;
-  opacity: 1;
+@media only screen and (min-width: 538px) {
+  .intro {
+    padding: 2rem 7rem;
+  }
+
+  img {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .intro {
+    padding: 2rem 9rem;
+  }
+}
+
+@media only screen and (min-width: 666px) {
+  .intro {
+    padding: 2rem 12.2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 1.25rem;
+  }
+
+  img {
+    width: 30%;
+  }
+
+  .paper {
+    margin: 0 1rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  img {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  img {
+    width: 20%;
+  }
 }
